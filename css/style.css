@@ -1,0 +1,859 @@
+@charset "UTF-8";
+
+/* 共通 */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: #fff;
+    color: #707070;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+.flex_space-between {
+    display: flex;
+    justify-content: space-between;
+}
+.flex_space-center {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper_wide {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.wrapper_middle {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.site-title {
+    color: #56C1C1;
+    font-size: 38px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+}
+.contact-btn {
+    color: #887800;
+    background-color: #FFFEED;
+    border: solid 1px #887800;
+    border-radius: 20px;
+    padding: 12px 52px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    height: 120px;
+    margin-right: 32px;
+}
+.contact-btn:hover {
+    filter: brightness(1.05);
+}
+.contact-btn span {
+    display: inline-block;
+    font-size: 16px;
+}
+.contact-btn .large {
+    font-size: 32px;
+}
+.contact-btn .small {
+    font-size: 16px;
+}
+.reservation-btn {
+    color: #FFFFFF;
+    background-color: #FFC05A;
+    border-radius: 20px;
+    font-size: 28px;
+    padding: 40px 32px;
+    display: inline-block;
+    text-align: center;
+    width: 324px;
+    height: 120px;
+}
+.reservation-btn:hover {
+    filter: brightness(1.05);
+}
+.detail_link {
+    text-align: end;
+}
+.detail_link a {
+    padding: 16px;
+}
+.detail_link a:hover {
+    border-bottom: solid 1px #707070;
+}
+
+/* header */
+#header {
+    padding-bottom: 80px;
+    /* position: relative; */
+}
+#header .header_contents {
+    position: relative;
+}
+#header .header-bg {
+    position: relative;
+    background-color: #EAF7F7;
+    height: 120px;
+    z-index: -1;
+}
+#header .header-bg::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #EAF7F7;
+    border-bottom-left-radius: 100% 200px;
+    border-bottom-right-radius: 100% 200px;
+    z-index: -1;
+}
+#header .site-title {
+    position: absolute;
+    top: -50px;
+}
+
+/* nav */
+nav {
+    color: #887800;
+}
+
+/* pc_nav */
+.pc_nav {
+    position: absolute;
+    top: -50px;
+    right: 0;
+}
+.pc_nav .nav-list li {
+    padding: 13px 20px;
+    position: relative;
+}
+.pc_nav .nav-list li::after {
+    position: absolute;
+    content: "/";
+    right: -5px;
+}
+.pc_nav .nav-list li:last-child::after {
+    content: "";
+}
+.pc_nav .nav-list li a:hover {
+    border-bottom: solid 1px #887800;
+}
+
+/* sp_nav */
+.sp_nav {
+    display: none;
+}
+
+/* top-contents */
+.top-contents {
+    position: relative;
+}
+
+/* main-visual */
+.main-visual {
+    margin-top: 70px;
+}
+.sp_top_img {
+    display: none;
+}
+
+/* header-btn */
+.header-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+/* news */
+#news {
+    padding-top: 35px;
+    padding-bottom: 190px;
+}
+#news .section-title {
+    margin-bottom: 36px;
+}
+#news .section-title::after {
+    content: url('../img/News.png');
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+#news .news-list li {
+    border-bottom: solid 1px #707070;
+}
+#news .news-list li:first-child {
+    border-top: solid 1px #707070;
+}
+#news .news-list a {
+    display: inline-block;
+    width: 450px;
+    padding: 24px 22px;
+}
+#news .news-list a:hover {
+    background-color: #EFEFEF;
+}
+#news .news-list time {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+#news .news-list .text {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+}
+
+#news .clinic-hours {
+    background-color: #f9f6dd;
+    padding: 85px 45px;
+    border-radius: 20px;
+    border: solid 1px #968A22;
+    height: 380px;
+    display: inline-block;
+    color: #968A22;
+}
+#news .clinic-hours table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+#news .clinic-hours th,
+#news .clinic-hours td {
+    padding: 14px;
+}
+#news .clinic-hours thead th {
+    font-weight: bold;
+    border-bottom: 2px solid #d6ce9b;
+}
+#news .clinic-hours tbody td {
+    border-bottom: 1px solid #d6ce9b;
+}
+#news .clinic-hours .title {
+    font-size: 30px;
+}
+
+/* concept */
+#concept {
+    padding-bottom: 140px;
+}
+#concept .section-title {
+    margin-bottom: 51px;
+}
+#concept .section-title::after {
+    content: url('../img/Concept.png');
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 250px;
+}
+#concept .text {
+    max-width: 520px;
+    z-index: 2;
+}
+#concept .text p {
+    line-height: 44px;
+}
+#concept .img-wrap {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+#concept .img {
+    object-fit: contain;
+    max-width: 480px;
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+#concept .img-wrap::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #EAF7F7;
+    width: 500px;
+    height: 380px;
+    bottom: -10px;
+    right: calc((100vw - 1100px) / -2);
+    border-radius: 20px 0 0 20px;
+    z-index: -1;
+}
+
+/* contents */
+#contents {
+    padding-bottom: 140px;
+}
+#contents .section-title {
+    margin-bottom: 100px;
+}
+#contents .section-title::after {
+    content: url('../img/Contents.png');
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+#contents .contents_list {
+    margin-bottom: 120px;
+    text-align: center;
+}
+#contents .content {
+    color: #45BCBC;
+    background-color: #F5FCFC;
+    border: solid 1px #45BCBC;
+    border-radius: 20px;
+}
+#contents .content a {
+    display: block;
+    box-sizing: border-box;
+    width: 300px;
+    padding: 30px 35px;
+}
+#contents .content a:hover {
+    opacity: 0.8;
+}
+#contents .content .content_title {
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+#contents .content .img {
+    margin-bottom: 50px;
+    position: relative;
+}
+#contents .content .img img {
+    height: 50px;
+}
+#contents .content .img::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #45BCBC;
+    width: 80px;
+    height: 1px;
+    bottom: -24px;
+    left: calc(50% - 40px);
+}
+
+/* blog */
+#blog {
+    padding-bottom: 160px;
+}
+#blog .section-title {
+    margin-bottom: 75px;
+}
+#blog .section-title::after {
+    content: url('../img/Blog.png');
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+#blog .blog-list li {
+    width: 23%;
+    margin-bottom: 80px;
+}
+#blog .blog-list li a:hover {
+    opacity: 0.8;
+}
+#blog .blog-list li img {
+    margin-bottom: 40px;
+}
+#blog .blog-list li time {
+    display: inline-block;
+    padding-right: 15px;
+    height: 100px;
+}
+#blog .blog-list li .text {
+    display: inline-block;
+}
+
+/* photo */
+#photo {
+    padding-bottom: 140px;
+}
+
+/* access */
+#access {
+    padding-bottom: 240px;
+}
+#access .section-title {
+    margin-bottom: 60px;
+}
+#access .section-title::after {
+    content: url('../img/Access.png');
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+#access .list_title {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+#access .detail-list {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 36px;
+}
+#access .detail-list dt {
+    width: 40%;
+}
+#access .detail-list dd {
+    width: 60%;
+    margin-bottom: 48px;
+}
+#access .detail-list dd:last-child {
+    margin-bottom: 0;
+}
+#access iframe {
+    width: 690px;
+    height: 390px;
+}
+
+/* footer */
+#footer {
+    background-color: #EAF7F7;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    color: #887800;
+}
+#footer .footer_contents {
+    margin-bottom: 100px;
+}
+#footer .footer-list li a {
+    display: block;
+    padding: 20px 0;
+    margin-right: 200px;
+}
+#footer .footer-list li a:hover {
+    border-bottom: solid 1px #887800;
+}
+#footer .footer-btn .reservation-btn {
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+#footer .footer-btn .contact-btn {
+    margin-right: 0;
+}
+#footer .copyright {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* タブレット・SP版 */
+@media screen and (max-width: 1240px) {
+
+    /* 共通 */
+    body {
+        font-size: 16px;
+    }
+    .wrapper_wide {
+        padding: 0 20px;
+    }
+    .wrapper_middle {
+        padding: 0 20px;
+    }
+    .flex_row-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /* nav */
+    /* sp_nav */
+    .pc_nav {
+        display: none;
+    }
+    .sp_nav {
+        display: block;
+    }
+
+    /* nav-close */
+    nav .menu-button {
+        position: fixed;
+        z-index: 30;
+        top: 80px;
+        right: 20px;
+        width: 36px;
+        cursor: pointer;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav .nav-list-open.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* nav-open */
+    nav .close-button {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 36px;
+        cursor: pointer;
+    }
+    nav .nav-list-open {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    nav .nav-list-open.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    nav .nav-list {
+        padding: 150px 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding-left: 30px;
+        /* font-size: 20px; */
+    }
+
+    /* news */
+    #news .flex_space-between {
+        gap: 20px;
+    }
+    #news .news_list_detail {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 48%;
+        min-width: 300px;
+    }
+    #news .news-list a {
+        width: 100%;
+    }
+
+    #news .clinic-hours {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 48%;
+        min-width: 300px;
+        padding: 60px 15px;
+        border-radius: 20px;
+        border: solid 1px #968A22;
+        box-sizing: border-box;
+        max-height: 100%;
+        display: block;
+    }
+    #news .clinic-hours table {
+        border-collapse: collapse;
+        text-align: center;
+        font-size: 18px;
+    }
+    #news .clinic-hours th,
+    #news .clinic-hours td {
+        padding: 12px;
+    }
+    #news .clinic-hours thead th {
+        font-weight: bold;
+        border-bottom: 2px solid #d6ce9b;
+    }
+    #news .clinic-hours tbody td {
+        border-bottom: 1px solid #d6ce9b;
+    }
+    #news .clinic-hours .title {
+        font-size: 20px;
+    }
+
+    /* concept */
+    #concept .text {
+        padding-right: 20px;
+    }
+    #concept .img-wrap::after {
+        right: calc(((100vw - 1100px) / -2) - 20px);
+    }
+
+    /* contents */
+    #contents .content {
+        width: 30%;
+    }
+    #contents .content a {
+        width: 100%;
+        padding: 30px 30px;
+    }
+    #contents .content a:hover {
+        opacity: 0.8;
+    }
+    #contents .content .content_title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    #contents .content .img {
+        margin-bottom: 50px;
+        position: relative;
+    }
+    #contents .content .img img {
+        height: 50px;
+    }
+
+    /* footer */
+    #footer .footer-list li a {
+        margin-right: 100px;
+    }
+}
+
+/* タブレット版表示崩れ防止 */
+@media screen and (max-width: 1100px) {
+    #concept .img-wrap::after {
+        right: -20px;
+    }
+}
+
+/* SP版 */
+@media screen and (max-width: 880px) {
+    /* 共通 */
+    .site-title {
+        font-size: 22px;
+    }
+    .section-title {
+        font-size: 24px;
+    }
+    .contact-btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .reservation-btn {
+        width: 100%;
+    }
+
+    /* header */
+    #header {
+        padding-bottom: 24px;
+    }
+    #header .site-title {
+        top: -40px;
+    }
+
+    /* nav-close */
+    nav .menu-button {
+        right: 40px;
+    }
+    /* nav-open */
+    nav .close-button {
+        right: 40px;
+    }
+
+    /* main-visual */
+    .main-visual {
+        margin-top: 54px;
+        margin-bottom: 24px;
+    }
+    .pc_top_img {
+        display: none;
+    }
+    .sp_top_img {
+        display: block;
+        width: 100%;
+    }
+
+    /* top-contents */
+    .top-contents {
+        position: static;
+    }
+
+    /* header-btn */
+    .header-btn {
+        position: static;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    /* news */
+    #news {
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+    #news .section-title {
+        margin-bottom: 20px;
+    }
+    #news .section-title::after {
+        top: -15px;
+        left: 30px;
+    }
+    #news .sp_column-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #news .news-list a {
+        width: 100%;
+    }
+    #news .clinic-hours {
+        max-width: 100%;
+        padding: 20px 12px;
+        height: 100%;
+        margin-bottom: 40px;
+    }
+    #news .clinic-hours table {
+        width: 100%;
+        font-size: 12px;
+    }
+    #news .clinic-hours .title {
+        font-size: 12px;
+    }
+
+    /* concept */
+    #concept {
+        padding-bottom: 82px;
+        display: flex;
+        flex-direction: column;
+    }
+    #concept .section-title {
+        margin-bottom: 25px;
+    }
+    #concept .section-title::after {
+        top: -15px;
+        left: 80px;
+    }
+    #concept .text {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    #concept .img {
+        max-width: 100%;
+        width: 100%;
+    }
+    #concept .img-wrap::after {
+        width: 90%;
+        left: auto;
+        right: -20px;
+        height: 300px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    /* contents */
+    #contents {
+        padding-bottom: 45px;
+    }
+    #contents .section-title {
+        margin-bottom: 30px;
+    }
+    #contents .section-title::after {
+        top: -15px;
+        left: 50px;
+    }
+    #contents .flex_space-between {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #contents .contents_list {
+        margin-bottom: 40px;
+    }
+    #contents .content {
+        width: 300px;
+        margin-bottom: 40px;
+    }
+
+    /* blog */
+    #blog {
+        padding-bottom: 67px;
+    }
+    #blog .section-title {
+        margin-bottom: 37px;
+    }
+    #blog .section-title::after {
+        top: -15px;
+        left: 40px;
+    }
+    #blog .flex_space-between {
+        flex-wrap: wrap;
+    }
+    #blog .blog-list li {
+        width: 48%;
+        margin-bottom: 46px;
+    }
+    #blog .blog-list li time {
+        height: 50px;
+    }
+    /* photo */
+    #photo {
+        padding-bottom: 60px;
+    }
+
+    /* access */
+    #access {
+        padding-bottom: 80px;
+    }
+    #access .section-title {
+        margin-bottom: 40px;
+    }
+    #access .section-title::after {
+        top: -15px;
+        left: 50px;
+    }
+    #access .flex {
+        flex-direction: column;
+    }
+    #access .detail-list {
+        width: 100%;
+    }
+    #access .access-text {
+        margin-bottom: 40px;
+    }
+    #access iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    /* footer */
+    #footer {
+        padding-top: 38px;
+        padding-bottom: 20px;
+    }
+    #footer .flex_space-between {
+        flex-direction: column;
+    }
+    #footer .footer_contents {
+        margin-bottom: 55px;
+    }
+    #footer .footer-list {
+        margin-bottom: 25px;
+    }
+    #footer .footer-list li a {
+        margin-right: 20%;
+    }
+    #footer .footer-btn {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>デンタルクリニック</title>
+</head>
+<body>
+    <header id="header">
+        <div class="header-bg"></div>
+        <div class="header_contents wrapper_wide">
+            <div class="flex_space-between">
+                <h1 class="site-title"><a href="index.html">ひかりデンタルクリニック</a></h1>
+                
+                <nav>
+                    <div class="pc_nav">
+                        <ul class="nav-list flex">
+                            <li><a href="#news">おしらせ・診療時間</a></li>
+                            <li><a href="#concept">クリニックについて</a></li>
+                            <li><a href="#contents">診療項目</a></li>
+                            <li><a href="#blog">ブログ</a></li>
+                            <li><a href="#access">交通案内</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="sp_nav">
+                        <!-- メニューを閉じているとき -->
+                        <div>
+                            <div class="icon">
+                                <img class="menu-button" src="img/menu.svg" alt="menu-button">
+                            </div>
+                        </div>
+                        
+                        <!-- メニューを開いているとき -->
+                        <div class="nav-list-open">
+                            <div>
+                                <div class="icon">
+                                    <img class="close-button" src="img/close.svg" alt="close-button">
+                                </div>
+                                <ul class="nav-list">
+                                    <li><a href="#news">おしらせ・診療時間</a></li>
+                                    <li><a href="#concept">クリニックについて</a></li>
+                                    <li><a href="#contents">診療項目</a></li>
+                                    <li><a href="#blog">ブログ</a></li>
+                                    <li><a href="#access">交通案内</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+    
+            <div class="top-contents">
+                <div class="main-visual">
+                    <img class="pc_top_img" src="img/top_pc.png" alt="main-visual_pc">
+                    <img class="sp_top_img" src="img/top_sp.png" alt="main-visual_sp">
+                </div>
+    
+                <div class="header-btn flex">
+                    <a class="contact-btn" href="#">
+                        <span>電話予約・お問い合わせ</span>
+                        <span class="large">01-2345-6789</span>
+                        <span class="small">※受付時間 9:00 〜 18:30</span>
+                    </a>
+                    <a class="reservation-btn" href="#">
+                        Web予約はこちら
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="news" class="wrapper_middle">
+            <div class="flex_space-between sp_column-reverse">
+                <div class="news_list_detail">
+                    <h2 class="section-title">おしらせ</h2>
+                    <ul class="news-list">
+                        <li>
+                            <a href="#">
+                                <time datetime="2024-10-15">2024.10.15</time>
+                                <p class="text">定期歯科検診のご案内</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time datetime="2024-09-20">2024.09.20</time>
+                                <p class="text">ウェブサイトを更新しました</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time datetime="2024-09-01">2024.09.01</time>
+                                <p class="text">診療費につきまして</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time datetime="2024-08-01">2024.08.01</time>
+                                <p class="text">夏季休業につきまして</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time datetime="2024-06-24">2024.06.24</time>
+                                <p class="text">みんなのはみがき講座 開講します</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clinic-hours">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="title">診療時間</th>
+                                <th>月</th>
+                                <th>火</th>
+                                <th>水</th>
+                                <th>木</th>
+                                <th>金</th>
+                                <th>土</th>
+                                <th>日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>9:00 ～ 13:00</td>
+                                <td>●</td>
+                                <td>●</td>
+                                <td>×</td>
+                                <td>●</td>
+                                <td>●</td>
+                                <td>●</td>
+                                <td>×</td>
+                            </tr>
+                            <tr>
+                                <td>15:00 ～ 19:00</td>
+                                <td>●</td>
+                                <td>●</td>
+                                <td>×</td>
+                                <td>●</td>
+                                <td>●</td>
+                                <td>●</td>
+                                <td>×</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                  
+            </div>
+        </section>
+
+        <section id="concept" class="flex_space-between wrapper_middle">
+            <div class="text">
+                <h2 class="section-title">クリニックについて</h2>
+                <p>
+                    当院は、お子様からお年寄りの方まで、どなたでも気軽にご利用いただける地域の歯医者さんです。
+                    私たちは、皆さまの歯の健康を守るため、わかりやすい説明と、丁寧でやさしい治療を心がけています。
+                    
+                    私たちは、皆さまが安心して通えるよう、清潔で安全な環境づくりに努めています。
+                    また、治療前にしっかりとお話を伺い、できるだけ痛みの少ない治療を行うよう心がけています。
+                </p>
+            </div>
+            <div class="img-wrap">
+                <img class="img" src="img/concept_photo.png" alt="conpect">
+            </div>
+        </section>        
+    
+        <section id="contents" class="wrapper_middle">
+            <h2 class="section-title">診療項目</h2>
+            <div class="contents_list flex_space-between">
+                <div class="content">
+                    <a href="#">
+                        <p class="content_title">歯を健康に<br>
+                            保ちたい</p>
+                        <div class="img">
+                            <img src="img/contents_icon_1.png" alt="contents_icon_1">
+                        </div>
+                        <p class="content_detail">→定期歯科検診</p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <p class="content_title">歯周病や<br>
+                            虫歯を治したい</p>
+                        <div class="img">
+                            <img src="img/contents_icon_2.png" alt="contents_icon_2">
+                        </div>
+                        <p class="content_detail">→歯周病・虫歯治療</p>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <p class="content_title">歯並びを<br>
+                            綺麗にしたい</p>
+                        <div class="img">
+                            <img src="img/contents_icon_3.png" alt="contents_icon_3">
+                        </div>
+                        <p class="content_detail">→歯列矯正</p>
+                    </a>
+                </div>
+            </div>
+            <div class="detail_link">
+                <a href="#">その他の診療項目→</a>
+            </div>
+        </section>
+    
+        <section id="blog" class="wrapper_middle">
+            <h2 class="section-title">ブログ</h2>
+            <ul class="blog-list flex_space-between">
+                <li>
+                    <a href="#">
+                        <img src="img/blog_1.png" alt="blog_1">
+                        <div class="flex">
+                            <time datetime="2024-10-2">2024.10.2</time>
+                            <span class="text">知っておきたい！入れ歯のメンテナンス方…</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/blog_2.png" alt="blog_2">
+                        <div class="flex">
+                            <time datetime="2024-10-2">2024.10.2</time>
+                            <span class="text">毎日のケアで健康な歯を守ろう</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/blog_3.png" alt="blog_3">
+                        <div class="flex">
+                            <time datetime="2024-10-2">2024.10.2</time>
+                            <span class="text">定期検診の重要性：早期発見でお口の健康…</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/blog_4.png" alt="blog_4">
+                        <div class="flex">
+                            <time datetime="2024-10-2">2024.10.2</time>
+                            <span class="text">リラックスして受けられる歯科治療とは？</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="detail_link">
+                <a href="#">過去の投稿→</a>
+            </div>
+        </section>
+    
+        <section id="photo" class="wrapper_wide">
+            <img src="img/visual.png" alt="photo">
+        </section>
+    
+        <section id="access">
+            <div class="wrapper_middle">
+                <div class="flex">
+                    <div class="access-text">
+                        <h2 class="section-title">交通案内</h2>
+                        <p class="list_title">ひかりデンタルクリニック</p>
+                        <dl class="detail-list">
+                            <dt>住所</dt>
+                            <dd>〒980-0021 宮城県仙台市青葉区XXXX1丁目1ー1<br>
+                                仙台駅徒歩1分</dd>
+                            <dt>電話番号</dt>
+                            <dd>XXX-XXX-XXXX</dd>
+                            <dt>診療時間</dt>
+                            <dd>午前 9:00 - 13:00 <br>
+                                午後 15:00 - 19:00
+                            </dd>
+                            <dt>休診日</dt>
+                            <dd>水曜日、日曜日</dd>
+                        </dl>
+                    </div>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.834866011849!2d140.88024881560276!3d38.26013579185823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a28180c510b87%3A0xb2a30b91be1ffdbc!2z5LuZ5Y-w6aeF!5e0!3m2!1sja!2sjp!4v1657599005427!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="wrapper_wide">
+            <div class="footer_contents flex_space-between">
+                <div class="footer-list flex">
+                    <ul class="footer-list_1">
+                        <li><a href="#news">おしらせ・診療時間</a></li>
+                        <li><a href="#concept">クリニックについて</a></li>
+                        <li><a href="#contents">診療項目</a></li>
+                        <li><a href="#blog">ブログ</a></li>
+                        <li><a href="#access">交通案内</a></li>
+                    </ul>
+                    <ul class="footer-list_2">
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-btn">
+                    <a class="reservation-btn" href="#">
+                        Web予約はこちら
+                    </a>
+                    <a class="contact-btn" href="#">
+                        <span>電話予約・お問い合わせ</span>
+                        <span class="large">01-2345-6789</span>
+                        <span class="small">※受付時間 9:00 〜 18:30</span>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">© Copyright K.Yaguchi Portfolio Site All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
